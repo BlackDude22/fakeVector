@@ -5,6 +5,7 @@
 ## Spartos analizė
 
 Atlikta po 100 bandymų su 10^7 std::string l-value tipo push_back'ų.
+
 | Optimization flag | Fake time | Real time | Difference |
 |-------------------|-----------|-----------|------------|
 | None | 1.0945s | 1.0389s | -5.35% |
