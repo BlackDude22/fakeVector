@@ -6,12 +6,14 @@
 template <class InputIterator, typename = std::_RequireInputIter<InputIterator>>
 ```
 
+Nuo c++11:
 ```cpp
-void
-push_back(value_type&& __x){
+void push_back(value_type&& __x){
 emplace_back(std::move(__x)); 
 }
 ```
+
+
 ## Spartos analizė
 
 Atlikta po 100 bandymų su 10^7 std::string l-value tipo push_back'ų.
