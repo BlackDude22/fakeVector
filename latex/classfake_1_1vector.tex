@@ -1,0 +1,1158 @@
+\hypertarget{classfake_1_1vector}{}\section{fake\+:\+:vector$<$ T, Alloc $>$ Class Template Reference}
+\label{classfake_1_1vector}\index{fake\+::vector$<$ T, Alloc $>$@{fake\+::vector$<$ T, Alloc $>$}}
+
+
+Vector class. A copy of std\+::vector.  
+
+
+
+
+{\ttfamily \#include $<$fake\+Vector.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_abbcade9efee0cb25d5c801099de99981}\label{classfake_1_1vector_abbcade9efee0cb25d5c801099de99981}} 
+typedef T {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a12496987133d30408fe2e0cd47d20c29}\label{classfake_1_1vector_a12496987133d30408fe2e0cd47d20c29}} 
+typedef Alloc {\bfseries allocator\+\_\+type}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a0287f76d70b14ce7371b3c31f8775bd8}\label{classfake_1_1vector_a0287f76d70b14ce7371b3c31f8775bd8}} 
+typedef value\+\_\+type \& {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a8a01ce111a60ff82d241498b6ddd1a46}\label{classfake_1_1vector_a8a01ce111a60ff82d241498b6ddd1a46}} 
+typedef const value\+\_\+type \& {\bfseries const\+\_\+reference}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a0088390bae81b7a6f0eb069f26666e23}\label{classfake_1_1vector_a0088390bae81b7a6f0eb069f26666e23}} 
+typedef std\+::allocator\+\_\+traits$<$ allocator\+\_\+type $>$\+::pointer {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a2956bbdf422d34c6f4a2c3ed68f999ed}\label{classfake_1_1vector_a2956bbdf422d34c6f4a2c3ed68f999ed}} 
+typedef std\+::allocator\+\_\+traits$<$ allocator\+\_\+type $>$\+::const\+\_\+pointer {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a35dde54cafc2ee964558722ec5a489f7}\label{classfake_1_1vector_a35dde54cafc2ee964558722ec5a489f7}} 
+typedef \+\_\+\+\_\+gnu\+\_\+cxx\+::\+\_\+\+\_\+normal\+\_\+iterator$<$ pointer, \mbox{\hyperlink{classfake_1_1vector}{vector}} $>$ {\bfseries iterator}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a740ba3e62696efcb1bc381aef4a14e84}\label{classfake_1_1vector_a740ba3e62696efcb1bc381aef4a14e84}} 
+typedef \+\_\+\+\_\+gnu\+\_\+cxx\+::\+\_\+\+\_\+normal\+\_\+iterator$<$ const\+\_\+pointer, \mbox{\hyperlink{classfake_1_1vector}{vector}} $>$ {\bfseries const\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a2dbb8f858c9c091afefa2f2cdb744c5a}\label{classfake_1_1vector_a2dbb8f858c9c091afefa2f2cdb744c5a}} 
+typedef std\+::reverse\+\_\+iterator$<$ iterator $>$ {\bfseries reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a55879623bfe48d2e8e538000f8ec25c8}\label{classfake_1_1vector_a55879623bfe48d2e8e538000f8ec25c8}} 
+typedef std\+::reverse\+\_\+iterator$<$ const\+\_\+iterator $>$ {\bfseries const\+\_\+reverse\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_ab400ca25938692afc255744f10dbbd93}\label{classfake_1_1vector_ab400ca25938692afc255744f10dbbd93}} 
+typedef std\+::ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classfake_1_1vector_a640fdc9ee198e6751a2c7b1eda4abb63}\label{classfake_1_1vector_a640fdc9ee198e6751a2c7b1eda4abb63}} 
+typedef size\+\_\+t {\bfseries size\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfake_1_1vector_a154ffc548c4e8e0684c6928ab0b7d753}{vector}} (const allocator\+\_\+type \&alloc=allocator\+\_\+type())
+\begin{DoxyCompactList}\small\item\em Default constructor with a possible custom allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_a3dec57e3a9ad5a085291f8ce5ba23465}{vector}} (size\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Constructor with defined size. Allocates memory for n elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_a5660b1ba62f11951f93eb603741c08a3}{vector}} (size\+\_\+type n, value\+\_\+type val, const allocator\+\_\+type \&alloc=allocator\+\_\+type())
+\begin{DoxyCompactList}\small\item\em Constructor with defined size, value and a possible custom allocator. Allocates memory for n elements and constructs n values val. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ }\\\mbox{\hyperlink{classfake_1_1vector_a674cc1fdbef23b69831facc689209a93}{vector}} (Input\+Iterator first, Input\+Iterator last, const allocator\+\_\+type \&alloc=allocator\+\_\+type())
+\begin{DoxyCompactList}\small\item\em Constructor with defined iterator range \mbox{[}first, last). Allocates memory for enough elements in this range and constructs them. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_a706c0c31eae10462a2e16f1cdfd8e665}{vector}} (const \mbox{\hyperlink{classfake_1_1vector}{vector}} \&x)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_a4d84ce09550fabd1fce9335f9de714c6}{vector}} (const \mbox{\hyperlink{classfake_1_1vector}{vector}} \&x, const allocator\+\_\+type \&alloc)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} type with custom allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_aae815b5ce700b2b1a816dd26351ba77f}{vector}} (\mbox{\hyperlink{classfake_1_1vector}{vector}} \&\&x)
+\begin{DoxyCompactList}\small\item\em Move constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_ae0022ef48098e201c22cddbde25a8be7}{vector}} (\mbox{\hyperlink{classfake_1_1vector}{vector}} \&\&x, const allocator\+\_\+type \&alloc)
+\begin{DoxyCompactList}\small\item\em Move constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} with custom allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector_a105d76ee97b7b28f47a5ff953d3938b1}{vector}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ il, const allocator\+\_\+type \&alloc=allocator\+\_\+type())
+\begin{DoxyCompactList}\small\item\em Constructor for an initializer list with possible custom allocator. Allocates enough memory for elements in the list and constructs them. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfake_1_1vector_a2324daef35048187cd9552811756a86c}\label{classfake_1_1vector_a2324daef35048187cd9552811756a86c}} 
+\mbox{\hyperlink{classfake_1_1vector_a2324daef35048187cd9552811756a86c}{$\sim$vector}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector}{vector}} \& \mbox{\hyperlink{classfake_1_1vector_a3ae5339e17ed0f558b0b94009b45c3c1}{operator=}} (const \mbox{\hyperlink{classfake_1_1vector}{vector}} \&x)
+\begin{DoxyCompactList}\small\item\em Copy assign operator for vector. Copies the properties and elements from vector on the right to the vector on the left. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector}{vector}} \& \mbox{\hyperlink{classfake_1_1vector_a3f7710f0e21f7531d24908bc82548f2b}{operator=}} (\mbox{\hyperlink{classfake_1_1vector}{vector}} \&\&x)
+\begin{DoxyCompactList}\small\item\em Move assign operator. Moves the properties and elements from vector on the right to the vector on the left. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfake_1_1vector}{vector}} \& \mbox{\hyperlink{classfake_1_1vector_a7c88fffd66b9f4b518098681050904b6}{operator=}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ il)
+\begin{DoxyCompactList}\small\item\em Assign operator for initializer list. Destroys previuosly held vector values. Creates a vector with initializer list values. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_aaf161eda743ae8c669aa5be71f3ff8a7}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Iterator to the start of the array. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_aa8b27b92fd87317d279876243372fdfe}{end}} ()
+\begin{DoxyCompactList}\small\item\em Iterator to the end of the array. \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_ad3567fd79465f31fe2bd26cb2eb85e2b}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+iterator to the start of the array. \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_a76f745c7d40fc82937f201dd22cd95d8}{end}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+iterator to the end of the array. \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_a1fe60d8e10668ca0c3dab212e695ffc1}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+iterator to the start of the array. \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_a764ef70912d85b94b0b130f33d8fd093}{cend}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+iterator to the end of the array. \end{DoxyCompactList}\item 
+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_a7b2476e1382bbf1ce2d799122f62b06b}{rbegin}} ()
+\begin{DoxyCompactList}\small\item\em Reverse iterator the end of the array. \end{DoxyCompactList}\item 
+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_ad3653b40c34a276138f7e09f8db45ead}{rend}} ()
+\begin{DoxyCompactList}\small\item\em Reverse iterator the start of the array. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_ab66c5a88df51f894685fde8dc6c033b5}{rbegin}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reverse iterator the end of the array. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_aa964e3b45beb15c3883d544e4f27a605}{rend}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reverse iterator the start of the array. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_af8134189dd3977bd4037a10e6854ac9c}{crbegin}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reverse iterator the end of the array. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector_adf391e72aed746a40ac380aaf70a32d8}{crend}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reverse iterator the start of the array. \end{DoxyCompactList}\item 
+size\+\_\+type \mbox{\hyperlink{classfake_1_1vector_ad523b22d3c2200602a0b0439b69e6f46}{size}} () const
+\begin{DoxyCompactList}\small\item\em Getter for current size of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a1c67c134cdc8d365af937918c9fc2a61}{resize}} (size\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Changes the size of the vector. If the new size is lower or equal to the current size destroys out of range elements and the capacity stays untouched. If the size is greater than the current size allocates memory for n more elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_ac41805c48307fdd9630c62dc1ca10259}{resize}} (size\+\_\+type n, const value\+\_\+type \&val)
+\begin{DoxyCompactList}\small\item\em Changes the size of the vector. If the new size is lower or equal to the current size destroys out of range elements and the capacity stays untouched. If the size is greater than the current size allocates memory and constructs n elements with value val. \end{DoxyCompactList}\item 
+size\+\_\+type \mbox{\hyperlink{classfake_1_1vector_ac6314c74adfdadd78ade4d4db2ea3e15}{capacity}} () const
+\begin{DoxyCompactList}\small\item\em Getter for current capacity of the vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classfake_1_1vector_adbbc8fb5844444c3d4d9d633aa4194d2}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the vector is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a1390854cc51f7b83f4b871fe84b8015b}{reserve}} (size\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Increases the capacity of the array if n is greater than the current capacity, does nothing otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfake_1_1vector_a73ced26188db838294c117fc228aedb6}\label{classfake_1_1vector_a73ced26188db838294c117fc228aedb6}} 
+void \mbox{\hyperlink{classfake_1_1vector_a73ced26188db838294c117fc228aedb6}{shrink\+\_\+to\+\_\+fit}} ()
+\begin{DoxyCompactList}\small\item\em Reduces the capacity to equal the size. \end{DoxyCompactList}\item 
+reference \mbox{\hyperlink{classfake_1_1vector_aec71da0fa184c234784f6895d8945d03}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Overloads the \mbox{[}\mbox{]} operator to work like in an array. \end{DoxyCompactList}\item 
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector_aabd2d9852edba68b74b45a0309583b9e}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+type n) const
+\begin{DoxyCompactList}\small\item\em Overloads the \mbox{[}\mbox{]} operator to work like in an array. \end{DoxyCompactList}\item 
+reference \mbox{\hyperlink{classfake_1_1vector_a1d69cf8d74039554ccde03a0be71ef14}{at}} (size\+\_\+type n)
+\begin{DoxyCompactList}\small\item\em Function to access an element in the array. Checks whether the requested element is the the range of the vector or not. If the element is out of range throws an std\+::out\+\_\+of\+\_\+range exception. \end{DoxyCompactList}\item 
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector_a471d597c2a40234bbe86179b97d0dcbf}{at}} (size\+\_\+type n) const
+\begin{DoxyCompactList}\small\item\em Function to access an element in the array. Checks whether the requested element is the the range of the vector or not. If the element is out of range throws an std\+::out\+\_\+of\+\_\+range exception. \end{DoxyCompactList}\item 
+reference \mbox{\hyperlink{classfake_1_1vector_aaa9e6a27783f8b72c203ae3fe7ad0859}{front}} ()
+\begin{DoxyCompactList}\small\item\em Reference to the start of the array. \end{DoxyCompactList}\item 
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector_a8b0b97b9c2b8a83c6b3ee6865a61c25a}{front}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reference to the start of the array. \end{DoxyCompactList}\item 
+reference \mbox{\hyperlink{classfake_1_1vector_a4c67f42f60eb6ea322065aa6c87315b7}{back}} ()
+\begin{DoxyCompactList}\small\item\em Reference to the end of the array. \end{DoxyCompactList}\item 
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector_a819b07f7862e65796d7457a6964f2ea4}{back}} () const
+\begin{DoxyCompactList}\small\item\em Const\+\_\+reference to the end of the array. \end{DoxyCompactList}\item 
+pointer \mbox{\hyperlink{classfake_1_1vector_a308cb3c0d13198a2a968a5239bf416a0}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pointer to the vector array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ }\\void \mbox{\hyperlink{classfake_1_1vector_a69ef51571cb66b677e3a05ff510a73a3}{assign}} (Input\+Iterator first, Input\+Iterator last)
+\begin{DoxyCompactList}\small\item\em Replaces the vectors contents with the values in range \mbox{[}first, end). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a164e01bd25c0ee0bb10f6044d186c2fa}{assign}} (size\+\_\+type n, const\+\_\+reference val)
+\begin{DoxyCompactList}\small\item\em Replaces the vectors contents with n number of values val. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a84afa1bde944ec3960a044387c34afde}{assign}} (std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ il)
+\begin{DoxyCompactList}\small\item\em Replaces the vectors contents with the values in an initializer list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a91aad69b6cb2986a6b31f965633a9998}{push\+\_\+back}} (const value\+\_\+type \&val)
+\begin{DoxyCompactList}\small\item\em Adds a value to the end of a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_a2532ed889fcf192d2f66080134d4470a}{push\+\_\+back}} (value\+\_\+type \&\&val)
+\begin{DoxyCompactList}\small\item\em Moves a value to the end of a vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfake_1_1vector_a563f7b6d19a362439c3ef0b7baa2dcb8}\label{classfake_1_1vector_a563f7b6d19a362439c3ef0b7baa2dcb8}} 
+void \mbox{\hyperlink{classfake_1_1vector_a563f7b6d19a362439c3ef0b7baa2dcb8}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the last item in the vector. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_a1d09e69dcdbdcee51e53315a3c2c059e}{insert}} (const\+\_\+iterator position, const value\+\_\+type \&val)
+\begin{DoxyCompactList}\small\item\em Inserts an element with a value val to a position pointed by an iterator position. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_a213241579c0b499ebfbfd139b24f7a60}{insert}} (const\+\_\+iterator position, value\+\_\+type \&\&val)
+\begin{DoxyCompactList}\small\item\em Moves and inserts an element with a value val to a position pointed by an iterator position. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_ae0e2fe207c2caffeeb59978b88b1ff3d}{insert}} (const\+\_\+iterator position, size\+\_\+type count, const value\+\_\+type \&val)
+\begin{DoxyCompactList}\small\item\em Inserts count number of elements with values val to a position pointed by an iterator position. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ }\\iterator \mbox{\hyperlink{classfake_1_1vector_ad29ca16087ee045eefbefcebadb50191}{insert}} (const\+\_\+iterator position, Input\+Iterator first, Input\+Iterator last)
+\begin{DoxyCompactList}\small\item\em Inserts the elements from range \mbox{[}first, last) to a position pointed by an iterator position. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_aa4507d6807264094b8b033b1cce41313}{insert}} (const\+\_\+iterator position, std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ il)
+\begin{DoxyCompactList}\small\item\em Inserts the elements from an initializer list to a position pointed by an iterator position. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_a9f770760191adfcaab0f08dc29689d48}{erase}} (const\+\_\+iterator position)
+\begin{DoxyCompactList}\small\item\em Removes an element from the vector pointed by the iterator position. \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classfake_1_1vector_a22a4f0fb6b42d2ec7107bb8194f4106c}{erase}} (const\+\_\+iterator first, const\+\_\+iterator last)
+\begin{DoxyCompactList}\small\item\em Removes the elements in the range \mbox{[}first, last) from the vector pointed by the iterator position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classfake_1_1vector_ac480f82e092e044293c38539b4db9430}{swap}} (\mbox{\hyperlink{classfake_1_1vector}{vector}} \&x)
+\begin{DoxyCompactList}\small\item\em Swaps the values and contents of two vectors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfake_1_1vector_a5e78aea1924eda8e204a682b2715ce78}\label{classfake_1_1vector_a5e78aea1924eda8e204a682b2715ce78}} 
+void \mbox{\hyperlink{classfake_1_1vector_a5e78aea1924eda8e204a682b2715ce78}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the vectors contents and sets the size to 0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... Args$>$ }\\iterator \mbox{\hyperlink{classfake_1_1vector_abc8d17690a8ec6dcbfcc3f02baad3f30}{emplace}} (const\+\_\+iterator position, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Inserts and constructs an element to the position position. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class... Args$>$ }\\void \mbox{\hyperlink{classfake_1_1vector_a00b1615dab9508281f3270b5052567ee}{emplace\+\_\+back}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Inserts and constructs an element to the end of the vector. \end{DoxyCompactList}\item 
+allocator\+\_\+type \mbox{\hyperlink{classfake_1_1vector_a1fbe6cb70f084552189f747b3130d86f}{get\+\_\+allocator}} ()
+\begin{DoxyCompactList}\small\item\em Returns the allocator associated to the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class Alloc = std\+::allocator$<$\+T$>$$>$\newline
+class fake\+::vector$<$ T, Alloc $>$}
+
+Vector class. A copy of std\+::vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements to hold \\
+\hline
+{\em Alloc} & Allocator for the vector \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfake_1_1vector_a154ffc548c4e8e0684c6928ab0b7d753}\label{classfake_1_1vector_a154ffc548c4e8e0684c6928ab0b7d753}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const allocator\+\_\+type \&}]{alloc = {\ttfamily allocator\+\_\+type()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Default constructor with a possible custom allocator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em alloc} & Custom allocator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a3dec57e3a9ad5a085291f8ce5ba23465}\label{classfake_1_1vector_a3dec57e3a9ad5a085291f8ce5ba23465}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor with defined size. Allocates memory for n elements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Element count \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a5660b1ba62f11951f93eb603741c08a3}\label{classfake_1_1vector_a5660b1ba62f11951f93eb603741c08a3}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n,  }\item[{value\+\_\+type}]{val,  }\item[{const allocator\+\_\+type \&}]{alloc = {\ttfamily allocator\+\_\+type()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with defined size, value and a possible custom allocator. Allocates memory for n elements and constructs n values val. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & \{ parameter\+\_\+description \} \\
+\hline
+\mbox{\tt in}  & {\em val} & The value \\
+\hline
+\mbox{\tt in}  & {\em alloc} & The allocate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a674cc1fdbef23b69831facc689209a93}\label{classfake_1_1vector_a674cc1fdbef23b69831facc689209a93}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last,  }\item[{const allocator\+\_\+type \&}]{alloc = {\ttfamily allocator\+\_\+type()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with defined iterator range \mbox{[}first, last). Allocates memory for enough elements in this range and constructs them. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Iterator to begin of range \\
+\hline
+\mbox{\tt in}  & {\em last} & Iterator to end of range \\
+\hline
+\mbox{\tt in}  & {\em alloc} & The allocator\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Input\+Iterator} & Class template type for iterator \\
+\hline
+{\em $<$unnamed$>$} & \{ description \} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classfake_1_1vector_a706c0c31eae10462a2e16f1cdfd8e665}\label{classfake_1_1vector_a706c0c31eae10462a2e16f1cdfd8e665}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector to be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a4d84ce09550fabd1fce9335f9de714c6}\label{classfake_1_1vector_a4d84ce09550fabd1fce9335f9de714c6}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&}]{x,  }\item[{const allocator\+\_\+type \&}]{alloc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} type with custom allocator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector to be copied \\
+\hline
+\mbox{\tt in}  & {\em alloc} & The allocator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_aae815b5ce700b2b1a816dd26351ba77f}\label{classfake_1_1vector_aae815b5ce700b2b1a816dd26351ba77f}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&\&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_ae0022ef48098e201c22cddbde25a8be7}\label{classfake_1_1vector_ae0022ef48098e201c22cddbde25a8be7}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&\&}]{x,  }\item[{const allocator\+\_\+type \&}]{alloc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor for \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}} with custom allocator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector to be moved \\
+\hline
+\mbox{\tt in}  & {\em alloc} & The allocator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a105d76ee97b7b28f47a5ff953d3938b1}\label{classfake_1_1vector_a105d76ee97b7b28f47a5ff953d3938b1}} 
+\index{fake\+::vector@{fake\+::vector}!vector@{vector}}
+\index{vector@{vector}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classfake_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$}]{il,  }\item[{const allocator\+\_\+type \&}]{alloc = {\ttfamily allocator\+\_\+type()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for an initializer list with possible custom allocator. Allocates enough memory for elements in the list and constructs them. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em il} & The initializer list \\
+\hline
+\mbox{\tt in}  & {\em alloc} & The allocator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfake_1_1vector_a69ef51571cb66b677e3a05ff510a73a3}\label{classfake_1_1vector_a69ef51571cb66b677e3a05ff510a73a3}} 
+\index{fake\+::vector@{fake\+::vector}!assign@{assign}}
+\index{assign@{assign}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::assign (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces the vectors contents with the values in range \mbox{[}first, end). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Iterator to the start of the range \\
+\hline
+\mbox{\tt in}  & {\em last} & Iterator to the end of the range\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Input\+Iterator} & Template parameter to only allow iterators to call this function. \\
+\hline
+{\em $<$unnamed$>$} & \{ description \} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classfake_1_1vector_a164e01bd25c0ee0bb10f6044d186c2fa}\label{classfake_1_1vector_a164e01bd25c0ee0bb10f6044d186c2fa}} 
+\index{fake\+::vector@{fake\+::vector}!assign@{assign}}
+\index{assign@{assign}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::assign (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n,  }\item[{const\+\_\+reference}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces the vectors contents with n number of values val. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Number of elements \\
+\hline
+\mbox{\tt in}  & {\em val} & Value of the elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a84afa1bde944ec3960a044387c34afde}\label{classfake_1_1vector_a84afa1bde944ec3960a044387c34afde}} 
+\index{fake\+::vector@{fake\+::vector}!assign@{assign}}
+\index{assign@{assign}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::assign (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$}]{il }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces the vectors contents with the values in an initializer list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em il} & The initializer list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a1d69cf8d74039554ccde03a0be71ef14}\label{classfake_1_1vector_a1d69cf8d74039554ccde03a0be71ef14}} 
+\index{fake\+::vector@{fake\+::vector}!at@{at}}
+\index{at@{at}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to access an element in the array. Checks whether the requested element is the the range of the vector or not. If the element is out of range throws an std\+::out\+\_\+of\+\_\+range exception. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Index of an element in the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the n\textquotesingle{}th element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a471d597c2a40234bbe86179b97d0dcbf}\label{classfake_1_1vector_a471d597c2a40234bbe86179b97d0dcbf}} 
+\index{fake\+::vector@{fake\+::vector}!at@{at}}
+\index{at@{at}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to access an element in the array. Checks whether the requested element is the the range of the vector or not. If the element is out of range throws an std\+::out\+\_\+of\+\_\+range exception. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Index of an element in the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reference to the n\textquotesingle{}th element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a4c67f42f60eb6ea322065aa6c87315b7}\label{classfake_1_1vector_a4c67f42f60eb6ea322065aa6c87315b7}} 
+\index{fake\+::vector@{fake\+::vector}!back@{back}}
+\index{back@{back}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reference to the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the end of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a819b07f7862e65796d7457a6964f2ea4}\label{classfake_1_1vector_a819b07f7862e65796d7457a6964f2ea4}} 
+\index{fake\+::vector@{fake\+::vector}!back@{back}}
+\index{back@{back}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reference to the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reference to the end of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aaf161eda743ae8c669aa5be71f3ff8a7}\label{classfake_1_1vector_aaf161eda743ae8c669aa5be71f3ff8a7}} 
+\index{fake\+::vector@{fake\+::vector}!begin@{begin}}
+\index{begin@{begin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator to the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Iterator to the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ad3567fd79465f31fe2bd26cb2eb85e2b}\label{classfake_1_1vector_ad3567fd79465f31fe2bd26cb2eb85e2b}} 
+\index{fake\+::vector@{fake\+::vector}!begin@{begin}}
+\index{begin@{begin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+iterator to the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+iterator to the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ac6314c74adfdadd78ade4d4db2ea3e15}\label{classfake_1_1vector_ac6314c74adfdadd78ade4d4db2ea3e15}} 
+\index{fake\+::vector@{fake\+::vector}!capacity@{capacity}}
+\index{capacity@{capacity}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for current capacity of the vector. 
+
+\begin{DoxyReturn}{Returns}
+Capacity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a1fe60d8e10668ca0c3dab212e695ffc1}\label{classfake_1_1vector_a1fe60d8e10668ca0c3dab212e695ffc1}} 
+\index{fake\+::vector@{fake\+::vector}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+iterator to the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+iterator to the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a764ef70912d85b94b0b130f33d8fd093}\label{classfake_1_1vector_a764ef70912d85b94b0b130f33d8fd093}} 
+\index{fake\+::vector@{fake\+::vector}!cend@{cend}}
+\index{cend@{cend}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+iterator to the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+iterator to the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_af8134189dd3977bd4037a10e6854ac9c}\label{classfake_1_1vector_af8134189dd3977bd4037a10e6854ac9c}} 
+\index{fake\+::vector@{fake\+::vector}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{crbegin()}{crbegin()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::crbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reverse iterator the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reverse iterator the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_adf391e72aed746a40ac380aaf70a32d8}\label{classfake_1_1vector_adf391e72aed746a40ac380aaf70a32d8}} 
+\index{fake\+::vector@{fake\+::vector}!crend@{crend}}
+\index{crend@{crend}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{crend()}{crend()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::crend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reverse iterator the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reverse iterator the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a308cb3c0d13198a2a968a5239bf416a0}\label{classfake_1_1vector_a308cb3c0d13198a2a968a5239bf416a0}} 
+\index{fake\+::vector@{fake\+::vector}!data@{data}}
+\index{data@{data}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+pointer \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pointer to the vector array. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the vector array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_abc8d17690a8ec6dcbfcc3f02baad3f30}\label{classfake_1_1vector_abc8d17690a8ec6dcbfcc3f02baad3f30}} 
+\index{fake\+::vector@{fake\+::vector}!emplace@{emplace}}
+\index{emplace@{emplace}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$class... Args$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::emplace (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts and constructs an element to the position position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments to forward to the constructor of the element\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Arguments template\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+An iterator the inserted element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a00b1615dab9508281f3270b5052567ee}\label{classfake_1_1vector_a00b1615dab9508281f3270b5052567ee}} 
+\index{fake\+::vector@{fake\+::vector}!emplace\+\_\+back@{emplace\+\_\+back}}
+\index{emplace\+\_\+back@{emplace\+\_\+back}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{emplace\+\_\+back()}{emplace\_back()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$class... Args$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::emplace\+\_\+back (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts and constructs an element to the end of the vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em args} & Arguments to forward to the constructor of the element\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Arguments template \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classfake_1_1vector_adbbc8fb5844444c3d4d9d633aa4194d2}\label{classfake_1_1vector_adbbc8fb5844444c3d4d9d633aa4194d2}} 
+\index{fake\+::vector@{fake\+::vector}!empty@{empty}}
+\index{empty@{empty}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+bool \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the vector is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the vector is empty, False otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aa8b27b92fd87317d279876243372fdfe}\label{classfake_1_1vector_aa8b27b92fd87317d279876243372fdfe}} 
+\index{fake\+::vector@{fake\+::vector}!end@{end}}
+\index{end@{end}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator to the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Iterator to the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a76f745c7d40fc82937f201dd22cd95d8}\label{classfake_1_1vector_a76f745c7d40fc82937f201dd22cd95d8}} 
+\index{fake\+::vector@{fake\+::vector}!end@{end}}
+\index{end@{end}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+iterator to the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+iterator to the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a9f770760191adfcaab0f08dc29689d48}\label{classfake_1_1vector_a9f770760191adfcaab0f08dc29689d48}} 
+\index{fake\+::vector@{fake\+::vector}!erase@{erase}}
+\index{erase@{erase}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an element from the vector pointed by the iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the removed element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a22a4f0fb6b42d2ec7107bb8194f4106c}\label{classfake_1_1vector_a22a4f0fb6b42d2ec7107bb8194f4106c}} 
+\index{fake\+::vector@{fake\+::vector}!erase@{erase}}
+\index{erase@{erase}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{first,  }\item[{const\+\_\+iterator}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the elements in the range \mbox{[}first, last) from the vector pointed by the iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em first} & Iterator to the start of the range \\
+\hline
+\mbox{\tt in}  & {\em last} & Iterator to the end of the range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the first of the removes elements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aaa9e6a27783f8b72c203ae3fe7ad0859}\label{classfake_1_1vector_aaa9e6a27783f8b72c203ae3fe7ad0859}} 
+\index{fake\+::vector@{fake\+::vector}!front@{front}}
+\index{front@{front}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reference to the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the start of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a8b0b97b9c2b8a83c6b3ee6865a61c25a}\label{classfake_1_1vector_a8b0b97b9c2b8a83c6b3ee6865a61c25a}} 
+\index{fake\+::vector@{fake\+::vector}!front@{front}}
+\index{front@{front}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reference to the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reference to the start of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a1fbe6cb70f084552189f747b3130d86f}\label{classfake_1_1vector_a1fbe6cb70f084552189f747b3130d86f}} 
+\index{fake\+::vector@{fake\+::vector}!get\+\_\+allocator@{get\+\_\+allocator}}
+\index{get\+\_\+allocator@{get\+\_\+allocator}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{get\+\_\+allocator()}{get\_allocator()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+allocator\+\_\+type \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::get\+\_\+allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the allocator associated to the vector. 
+
+\begin{DoxyReturn}{Returns}
+The allocator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a1d09e69dcdbdcee51e53315a3c2c059e}\label{classfake_1_1vector_a1d09e69dcdbdcee51e53315a3c2c059e}} 
+\index{fake\+::vector@{fake\+::vector}!insert@{insert}}
+\index{insert@{insert}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{const value\+\_\+type \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element with a value val to a position pointed by an iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em val} & The value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to the inserted value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a213241579c0b499ebfbfd139b24f7a60}\label{classfake_1_1vector_a213241579c0b499ebfbfd139b24f7a60}} 
+\index{fake\+::vector@{fake\+::vector}!insert@{insert}}
+\index{insert@{insert}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{value\+\_\+type \&\&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves and inserts an element with a value val to a position pointed by an iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em val} & The value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to the inserted value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ae0e2fe207c2caffeeb59978b88b1ff3d}\label{classfake_1_1vector_ae0e2fe207c2caffeeb59978b88b1ff3d}} 
+\index{fake\+::vector@{fake\+::vector}!insert@{insert}}
+\index{insert@{insert}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{size\+\_\+type}]{count,  }\item[{const value\+\_\+type \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts count number of elements with values val to a position pointed by an iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em count} & The count \\
+\hline
+\mbox{\tt in}  & {\em val} & The value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the first of the inserted elements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ad29ca16087ee045eefbefcebadb50191}\label{classfake_1_1vector_ad29ca16087ee045eefbefcebadb50191}} 
+\index{fake\+::vector@{fake\+::vector}!insert@{insert}}
+\index{insert@{insert}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$class Input\+Iterator , typename  = std\+::\+\_\+\+Require\+Input\+Iter$<$\+Input\+Iterator$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{Input\+Iterator}]{first,  }\item[{Input\+Iterator}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the elements from range \mbox{[}first, last) to a position pointed by an iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em first} & Iterator to the start of the range \\
+\hline
+\mbox{\tt in}  & {\em last} & Iterator to the end of the range\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Input\+Iterator} & Template argument to only allow iterators to pass \\
+\hline
+{\em $<$unnamed$>$} & \{ description \}\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the first of the inserted elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aa4507d6807264094b8b033b1cce41313}\label{classfake_1_1vector_aa4507d6807264094b8b033b1cce41313}} 
+\index{fake\+::vector@{fake\+::vector}!insert@{insert}}
+\index{insert@{insert}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const\+\_\+iterator}]{position,  }\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$}]{il }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts the elements from an initializer list to a position pointed by an iterator position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em position} & The position \\
+\hline
+\mbox{\tt in}  & {\em il} & The initializer list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator to the first of the inserted elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a3ae5339e17ed0f558b0b94009b45c3c1}\label{classfake_1_1vector_a3ae5339e17ed0f558b0b94009b45c3c1}} 
+\index{fake\+::vector@{fake\+::vector}!operator=@{operator=}}
+\index{operator=@{operator=}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{vector}}\& \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assign operator for vector. Copies the properties and elements from vector on the right to the vector on the left. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector on the right hand side\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns reference to the copied vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a3f7710f0e21f7531d24908bc82548f2b}\label{classfake_1_1vector_a3f7710f0e21f7531d24908bc82548f2b}} 
+\index{fake\+::vector@{fake\+::vector}!operator=@{operator=}}
+\index{operator=@{operator=}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{vector}}\& \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&\&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move assign operator. Moves the properties and elements from vector on the right to the vector on the left. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & Vector on the right hand side\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns reference to the copied vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a7c88fffd66b9f4b518098681050904b6}\label{classfake_1_1vector_a7c88fffd66b9f4b518098681050904b6}} 
+\index{fake\+::vector@{fake\+::vector}!operator=@{operator=}}
+\index{operator=@{operator=}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classfake_1_1vector}{vector}}\& \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::operator= (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ value\+\_\+type $>$}]{il }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign operator for initializer list. Destroys previuosly held vector values. Creates a vector with initializer list values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em il} & The initializer list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the new vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aec71da0fa184c234784f6895d8945d03}\label{classfake_1_1vector_aec71da0fa184c234784f6895d8945d03}} 
+\index{fake\+::vector@{fake\+::vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloads the \mbox{[}\mbox{]} operator to work like in an array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Index of an element in the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the n\textquotesingle{}th element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aabd2d9852edba68b74b45a0309583b9e}\label{classfake_1_1vector_aabd2d9852edba68b74b45a0309583b9e}} 
+\index{fake\+::vector@{fake\+::vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reference \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloads the \mbox{[}\mbox{]} operator to work like in an array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & Index of an element in the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reference to the n\textquotesingle{}th element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a91aad69b6cb2986a6b31f965633a9998}\label{classfake_1_1vector_a91aad69b6cb2986a6b31f965633a9998}} 
+\index{fake\+::vector@{fake\+::vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const value\+\_\+type \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a value to the end of a vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a2532ed889fcf192d2f66080134d4470a}\label{classfake_1_1vector_a2532ed889fcf192d2f66080134d4470a}} 
+\index{fake\+::vector@{fake\+::vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{value\+\_\+type \&\&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves a value to the end of a vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a7b2476e1382bbf1ce2d799122f62b06b}\label{classfake_1_1vector_a7b2476e1382bbf1ce2d799122f62b06b}} 
+\index{fake\+::vector@{fake\+::vector}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverse iterator the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Reverse iterator the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ab66c5a88df51f894685fde8dc6c033b5}\label{classfake_1_1vector_ab66c5a88df51f894685fde8dc6c033b5}} 
+\index{fake\+::vector@{fake\+::vector}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reverse iterator the end of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reverse iterator the end of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ad3653b40c34a276138f7e09f8db45ead}\label{classfake_1_1vector_ad3653b40c34a276138f7e09f8db45ead}} 
+\index{fake\+::vector@{fake\+::vector}!rend@{rend}}
+\index{rend@{rend}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverse iterator the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Reverse iterator the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_aa964e3b45beb15c3883d544e4f27a605}\label{classfake_1_1vector_aa964e3b45beb15c3883d544e4f27a605}} 
+\index{fake\+::vector@{fake\+::vector}!rend@{rend}}
+\index{rend@{rend}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+const\+\_\+reverse\+\_\+iterator \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Const\+\_\+reverse iterator the start of the array. 
+
+\begin{DoxyReturn}{Returns}
+Const\+\_\+reverse iterator the start of the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_a1390854cc51f7b83f4b871fe84b8015b}\label{classfake_1_1vector_a1390854cc51f7b83f4b871fe84b8015b}} 
+\index{fake\+::vector@{fake\+::vector}!reserve@{reserve}}
+\index{reserve@{reserve}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Increases the capacity of the array if n is greater than the current capacity, does nothing otherwise. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & New capacity. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_a1c67c134cdc8d365af937918c9fc2a61}\label{classfake_1_1vector_a1c67c134cdc8d365af937918c9fc2a61}} 
+\index{fake\+::vector@{fake\+::vector}!resize@{resize}}
+\index{resize@{resize}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the size of the vector. If the new size is lower or equal to the current size destroys out of range elements and the capacity stays untouched. If the size is greater than the current size allocates memory for n more elements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & New vector size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_ac41805c48307fdd9630c62dc1ca10259}\label{classfake_1_1vector_ac41805c48307fdd9630c62dc1ca10259}} 
+\index{fake\+::vector@{fake\+::vector}!resize@{resize}}
+\index{resize@{resize}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+type}]{n,  }\item[{const value\+\_\+type \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the size of the vector. If the new size is lower or equal to the current size destroys out of range elements and the capacity stays untouched. If the size is greater than the current size allocates memory and constructs n elements with value val. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & New vector size \\
+\hline
+\mbox{\tt in}  & {\em val} & Value to fill empty space \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfake_1_1vector_ad523b22d3c2200602a0b0439b69e6f46}\label{classfake_1_1vector_ad523b22d3c2200602a0b0439b69e6f46}} 
+\index{fake\+::vector@{fake\+::vector}!size@{size}}
+\index{size@{size}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+size\+\_\+type \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for current size of the vector. 
+
+\begin{DoxyReturn}{Returns}
+Size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfake_1_1vector_ac480f82e092e044293c38539b4db9430}\label{classfake_1_1vector_ac480f82e092e044293c38539b4db9430}} 
+\index{fake\+::vector@{fake\+::vector}!swap@{swap}}
+\index{swap@{swap}!fake\+::vector@{fake\+::vector}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$class T , class Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \mbox{\hyperlink{classfake_1_1vector}{fake\+::vector}}$<$ T, Alloc $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfake_1_1vector}{vector}}$<$ T, Alloc $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swaps the values and contents of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Vector to swap the contents with. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+fake\+Vector.\+h\end{DoxyCompactItemize}
