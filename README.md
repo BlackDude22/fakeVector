@@ -24,3 +24,7 @@ Atlikta po 100 bandymų su 10^7 std::string l-value tipo push_back'ų.
 | O1 | 0.8379s | 0.8247s | -1.59% |
 | O2 | 0.6353s | 0.6157s | -3.17% |
 | O3 | 0.6412s | 0.6242s | -2.71% |
+
+## Vektoriaus įdiegimas
+
+Išsisaugokite failą `fakeVector.h` savo projekto folder'yje ir ```cpp #include "
